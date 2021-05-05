@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
- class Market extends Component {
-    render() {
+
+ const Market = ({ cryptos }) => {
+     const renderCryptos = Object.keys(cryptos).map(cryptoID =>
+        <Link className='cryptoName' key={cryptoID} to={`/cryptos/${cryptoID}`}>{cryptos[cryptoID].name}</Link>
+        );
+
         return (
             <div>
-                <h1>Current Market</h1>
+                {renderCryptos}
             </div>
         )
-    }
-}
-
-
+ }
 export default Market
