@@ -1,8 +1,8 @@
 import React,{useState, useEffect} from 'react'
 import './App.css';
-import Home from './components/Home'
+
 import NavBar from './components/NavBar'
-import Market from './components/Market'
+import Market from './containers/Market'
 import Wallet from './components/Wallet'
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 
