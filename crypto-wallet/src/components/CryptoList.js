@@ -1,17 +1,26 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link, Route }from 'react-router-dom'
 import Watchlist from './Watchlist'
 
 
 
  const CryptoList = ({cryptos}) => {
+     
+
+    const [clickedCryptos, setCryptos] = useState([])
+    console.log(clickedCryptos)
     
     
     
     
     
     const handleClick = (e) => {
-        console.log(e)
+       cryptos.map(crypto => {
+           if(e.target.className === crypto.id){
+               setCryptos([...clickedCryptos,{crypto}])
+           }
+
+    })
     }
 
 
@@ -21,6 +30,7 @@ import Watchlist from './Watchlist'
             <h2>Price: ${crypto.price} (usd)</h2> 
             <h3>Market Cap: ${crypto.marketCap}</h3> 
             <h3>24 Hour trend: {crypto.ChangePercent24Hr}%</h3>
+            
         <hr />
         </div>
      );
@@ -32,7 +42,7 @@ import Watchlist from './Watchlist'
             {renderCryptos}
             <h1>Wish list</h1>
             <hr />
-            <Watchlist />
+            <Watchlist clickedCryptos={clickedCryptos}/>
           
             {/* <Route path={`/market/${crypto.id}`} render={props => (<CryptoShow {...props} cryptos={cryptos}/>)}/> */}
         </div>
