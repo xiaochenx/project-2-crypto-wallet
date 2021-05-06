@@ -3,7 +3,7 @@ import './App.css';
 
 import NavBar from './components/NavBar'
 import Market from './containers/Market'
-import Wallet from './components/Wallet'
+import Watchlist from './components/Watchlist'
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 
 
@@ -35,7 +35,7 @@ useEffect(() => {
           <NavBar />
           <Route exact path="/" render={() => <div><h1>Welcome to Your Crypto Wallet</h1></div>  }/>
           <Route exact path="/market" render={props => (<Market {...props} cryptos={cryptos}/>)}/>
-          <Route exact path="/wallet" component={Wallet}  />            
+          <Route exact path="/Watchlist" component={Watchlist}  />            
       </div>
     </Router>
   );

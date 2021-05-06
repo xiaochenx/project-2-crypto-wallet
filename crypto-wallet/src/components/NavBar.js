@@ -38,13 +38,13 @@ const NavBar = () => {
         </NavLink>
         <NavLink 
           style={link} 
-          to="/wallet"
+          to="/watchlist"
           activeStyle={{
             background: 'orange',
             color: 'black'
           }}
         >
-          My Wallet
+          My Watch List
         </NavLink>
       </div>
     );
