@@ -4,12 +4,10 @@ import Watchlist from './Watchlist'
 
 
 
- const CryptoList = ({cryptos}) => {
+ const CryptoList = ({cryptos , setClickedCryptos , clickedCryptos }) => {
      
 
-    const [clickedCryptos, setCryptos] = useState([])
-    console.log(clickedCryptos)
-    
+   
     
     
     
@@ -17,7 +15,7 @@ import Watchlist from './Watchlist'
     const handleClick = (e) => {
        cryptos.map(crypto => {
            if(e.target.className === crypto.id){
-               setCryptos([...clickedCryptos,{crypto}])
+               setClickedCryptos([...clickedCryptos,crypto])
            }
 
     })

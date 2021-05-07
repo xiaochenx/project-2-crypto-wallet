@@ -12,7 +12,7 @@ const API = " http://localhost:3001/cryptos"
 
 function App() {
 const [cryptos, setCryptos] = useState([])
-const [budget, setBudget] = useState([ 200000])
+const [clickedCryptos, setClickedCryptos] = useState([])
 
 useEffect(() => {
     fetch(API)
@@ -34,8 +34,8 @@ useEffect(() => {
       <div className="App">
           <NavBar />
           <Route exact path="/" render={() => <div><h1>Welcome to Your Crypto Wallet</h1></div>  }/>
-          <Route exact path="/market" render={props => (<Market {...props} cryptos={cryptos}/>)}/>
-          <Route exact path="/Watchlist" component={Watchlist}  />            
+          <Route exact path="/market" render={props => (<Market {...props} setClickedCryptos={setClickedCryptos} clickedCryptos={clickedCryptos} cryptos={cryptos}/>)}/>
+          <Route exact path="/Watchlist" render={props => (<Watchlist {...props}  clickedCryptos={clickedCryptos} cryptos={cryptos}/>)}  />            
       </div>
     </Router>
   );
