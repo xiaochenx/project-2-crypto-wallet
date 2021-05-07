@@ -4,27 +4,23 @@ import Watchlist from './Watchlist'
 
 
 
- const CryptoList = ({cryptos , setClickedCryptos , clickedCryptos }) => {
+ const CryptoList = ({cryptos , setCryptos }) => {
      
 
-   
-    
-    
-    
-    
-    const handleClick = (e) => {
-       cryptos.map(crypto => {
-           if(e.target.className === crypto.id){
-               setClickedCryptos([...clickedCryptos,crypto])
+    const handleClick = (id) => (e) => {
+       const newCryptos = cryptos.map(el => { 
+           if(el.id === id){
+            return ({...el , watchList : true})
            }
-
-    })
+           return el;
+       })
+       setCryptos(newCryptos);
     }
 
 
      const renderCryptos = cryptos.map(crypto =>
         <div>
-            <h1>{crypto.name}</h1> <button className={crypto.id} onClick={handleClick}>Add</button>
+            <h1>{crypto.name}</h1> <button className={crypto.id} onClick={handleClick(crypto.id)}>Add</button>
             <h2>Price: ${crypto.price} (usd)</h2> 
             <h3>Market Cap: ${crypto.marketCap}</h3> 
             <h3>24 Hour trend: {crypto.ChangePercent24Hr}%</h3>
@@ -40,7 +36,7 @@ import Watchlist from './Watchlist'
             {renderCryptos}
             <h1>Wish list</h1>
             <hr />
-            <Watchlist clickedCryptos={clickedCryptos}/>
+            {/* <Watchlist clickedCryptos={clickedCryptos}/> */}
           
             {/* <Route path={`/market/${crypto.id}`} render={props => (<CryptoShow {...props} cryptos={cryptos}/>)}/> */}
         </div>

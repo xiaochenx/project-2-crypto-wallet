@@ -34,8 +34,8 @@ useEffect(() => {
       <div className="App">
           <NavBar />
           <Route exact path="/" render={() => <div><h1>Welcome to Your Crypto Wallet</h1></div>  }/>
-          <Route exact path="/market" render={props => (<Market {...props} setClickedCryptos={setClickedCryptos} clickedCryptos={clickedCryptos} cryptos={cryptos}/>)}/>
-          <Route exact path="/Watchlist" render={props => (<Watchlist {...props}  clickedCryptos={clickedCryptos} cryptos={cryptos}/>)}  />            
+          <Route exact path="/market" render={props => (<Market {...props} setCryptos={setCryptos} clickedCryptos={clickedCryptos} cryptos={cryptos}/>)}/>
+          <Route exact path="/Watchlist" render={props => (<Watchlist {...props}  setCryptos={setCryptos} cryptos={cryptos}/>)}  />            
       </div>
     </Router>
   );

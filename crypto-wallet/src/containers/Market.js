@@ -6,11 +6,11 @@ import CryptoList from '../components/CryptoList'
 
 
 
-const Market = ({ cryptos , setClickedCryptos , clickedCryptos }) => {
+const Market = ({ cryptos , setCryptos }) => {
 
    
    return  <div>
-             <CryptoList setClickedCryptos={setClickedCryptos} clickedCryptos={clickedCryptos}  cryptos={cryptos} />
+             <CryptoList setCryptos={setCryptos} cryptos={cryptos} />
              {/* <Route path={`${match.url}/:cryptoId`} render={routerProps => <CryptoShow {...routerProps} cryptos={cryptos} /> }/> */}
              {/* {renderDetails} */}
             

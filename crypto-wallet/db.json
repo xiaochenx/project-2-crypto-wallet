@@ -7,7 +7,8 @@
       "price": "54212.95",
       "marketCap": "1013748412774.34",
       "ChangePercent24Hr": "-6.45",
-      "livePrice": "https://blockchain.info/"
+      "livePrice": "https://blockchain.info/",
+      "watchList": true
     },
     {
       "id": "ethereum",
@@ -15,7 +16,8 @@
       "price": "3271.19",
       "marketCap": "378595404565.04",
       "ChangePercent24Hr": "2.55",
-      "livePrice": "https://etherscan.io/"
+      "livePrice": "https://etherscan.io/",
+      "watchList": false
     },
     {
       "id": "binance-coin",
@@ -23,7 +25,8 @@
       "price": "619.56",
       "marketCap": "95062093441.68",
       "ChangePercent24Hr": "-6.73",
-      "livePrice": "https://etherscan.io/token/0xB8c77482e45F1F44dE1745F52C74426C631bDD52"
+      "livePrice": "https://etherscan.io/token/0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
+      "watchList": false
     },
     {
       "id": "dogecoin",
@@ -31,7 +34,8 @@
       "price": "0.53",
       "marketCap": "69339917217.21",
       "ChangePercent24Hr": "29.32",
-      "livePrice": "http://dogechain.info/chain/Dogecoin"
+      "livePrice": "http://dogechain.info/chain/Dogecoin",
+      "watchList": false
     }
   ]
 }
