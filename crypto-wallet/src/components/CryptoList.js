@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+const API = 'http://localhost:3001/cryptos/'
 
 
 
@@ -17,7 +17,20 @@ import React from 'react'
        setCryptos(newCryptos);
     }
 
+function getCryptos(){
+    fetch(API)
+    .then(r => r.json())
+    .then(data => {
+      console.log(data)
+        const allCryptos = data.map(c => {
+          return {...c}
+        })
+        setCryptos(allCryptos)
+        
+    })
+}
 
+    
 
     const deleteCrypto = (id) => (e) => {
         if(window.confirm('Are you sure?'))
@@ -28,8 +41,12 @@ import React from 'react'
                 'Content-Type': 'application/json'
                 }
             })
+            .then(r => r.json())
+            .then(() => {
+                getCryptos()
+            })
         }
-        console.log({cryptos})
+        
     }
 
      const renderCryptos = cryptos.map(crypto =>
