@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Button from 'react-bootstrap/Button'
 
 const API = 'http://localhost:3001/cryptos/'
 
@@ -51,8 +52,8 @@ function getCryptos(){
 
      const renderCryptos = cryptos.map(crypto =>
         <div>
-            <h1>{crypto.name}</h1> <button onClick={handleClick(crypto.id)}>Add</button>
-            <button onClick={deleteCrypto(crypto.id)}>Permenantly Delete</button> 
+            <h1>{crypto.name}</h1> <Button variant="outline-primary" onClick={handleClick(crypto.id)}>Add</Button>
+            <Button variant="outline-danger" onClick={deleteCrypto(crypto.id)}>Permenantly Delete</Button> 
             <h3>Rank: {crypto.rank}</h3>
             <h2>Price: ${crypto.price} (usd)</h2> 
             <h3>Market Cap: ${crypto.marketCap}</h3> 

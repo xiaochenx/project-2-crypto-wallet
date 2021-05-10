@@ -121,13 +121,73 @@
       "watchList": false
     },
     {
-      "id": "chainlink-1",
-      "name": "Chainlink-1",
-      "rank": "12",
-      "price": "48.71",
-      "marketCap": "20410983630.19",
-      "ChangePercent24Hr": "3.40",
-      "livePrice": "https://etherscan.io/token/0x514910771af9ca656af840dff83e8264ecf986ca",
+      "id": "vechain",
+      "name": "VeChain",
+      "rank": "13",
+      "price": "0.23",
+      "marketCap": "14920732629.27",
+      "ChangePercent24Hr": "3.02",
+      "livePrice": "https://explore.veforge.com/",
+      "watchList": false
+    },
+    {
+      "id": "stellar",
+      "name": "Stellar",
+      "rank": "14",
+      "price": "0.62",
+      "marketCap": "14476284760.45",
+      "ChangePercent24Hr": "1.09",
+      "livePrice": "https://dashboard.stellar.org/",
+      "watchList": false
+    },
+    {
+      "id": "usd-coin",
+      "name": "USD Coin",
+      "rank": "15",
+      "price": "1.00",
+      "marketCap": "14408881197.51",
+      "ChangePercent24Hr": "0.01",
+      "livePrice": "https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "watchList": false
+    },
+    {
+      "id": "ethereum-classic",
+      "name": "Ethereum Classic",
+      "rank": "16",
+      "price": "118.68",
+      "marketCap": "13804651728.78",
+      "ChangePercent24Hr": "-6.70",
+      "livePrice": "http://gastracker.io/",
+      "watchList": false
+    },
+    {
+      "id": "solana",
+      "name": "Solana",
+      "rank": "17",
+      "price": "44.38",
+      "marketCap": "12101221227.72",
+      "ChangePercent24Hr": "-0.827",
+      "livePrice": "https://explorer.solana.com/",
+      "watchList": false
+    },
+    {
+      "id": "theta",
+      "name": "THETA",
+      "rank": "18",
+      "price": "11.89",
+      "marketCap": "11897119348.07",
+      "ChangePercent24Hr": "-3.69",
+      "livePrice": "https://etherscan.io/token/0x3883f5e181fccaF8410FA61e12b59BAd963fb645",
+      "watchList": false
+    },
+    {
+      "id": "tron",
+      "name": "TRON",
+      "rank": "19",
+      "price": "0.14",
+      "marketCap": "10212607443.62",
+      "ChangePercent24Hr": "-1.34",
+      "livePrice": "https://tronscan.org/#/",
       "watchList": false
     }
   ]
