@@ -18,6 +18,7 @@ const API = 'http://localhost:3001/cryptos/'
        setCryptos(newCryptos);
     }
 
+    
 function getCryptos(){
     fetch(API)
     .then(r => r.json())

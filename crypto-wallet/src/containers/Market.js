@@ -9,7 +9,7 @@ const Market = ({ cryptos , setCryptos }) => {
 
    
    return  <div>
-             <CryptoList setCryptos={setCryptos} cryptos={cryptos} /> 
+             <CryptoList cryptos={cryptos} setCryptos={setCryptos} /> 
            </div>
 
 

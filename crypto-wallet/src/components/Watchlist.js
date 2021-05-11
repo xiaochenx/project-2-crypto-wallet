@@ -14,8 +14,8 @@ const Watchlist = ({cryptos , setCryptos }) => {
         setCryptos(newCryptos);
      }
 
-    const renderCryptos = cryptos.map(crypto =>{
-        console.log({ watchlist : crypto.watchlist})
+    const renderCryptos = cryptos.filter(crypto =>{
+        
         if(!crypto.watchList) return null;
         return <div>
             <h1>{crypto.name}</h1> <Button variant="outline-danger" onClick={handleClick(crypto.id)}>Delete</Button>
